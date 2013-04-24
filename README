@@ -1,0 +1,16 @@
+
+This is tahoe-deps.
+
+This is a collection of dependent libraries for Tahoe-LAFS. The packages
+here provide all of the automatically-installable prerequisites for Tahoe-LAFS
+as of version 1.8.2 (including things needed by its dependent libraries, like
+pycryptopp and zfec). The Tahoe-LAFS build process will download and build any
+libraries that are not already available on the system: by unpacking this
+tahoe-deps bundle into your Tahoe-LAFS source tree, you can avoid the download
+step. This is useful if you want to build Tahoe-LAFS while not attached to a
+network, a situation referred to as the "desert island build".
+
+The tahoe-deps tarball (of which this README is a part) will unpack
+into a tahoe-deps/ directory. The Tahoe build process (i.e. 'make build' or
+'python setup.py build_tahoe') will fetch dependent library tarballs from
+./tahoe-deps/ or ../tahoe-deps/ before it tries to download them from PyPI.
