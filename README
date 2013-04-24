@@ -3,7 +3,7 @@ This is tahoe-deps.
 
 This is a collection of dependent libraries for Tahoe-LAFS. The packages
 here provide all of the automatically-installable prerequisites for Tahoe-LAFS
-as of version 1.8.2 (including things needed by its dependent libraries, like
+as of version 1.9.0 (including things needed by its dependent libraries, like
 pycryptopp and zfec). The Tahoe-LAFS build process will download and build any
 libraries that are not already available on the system: by unpacking this
 tahoe-deps bundle into your Tahoe-LAFS source tree, you can avoid the download
