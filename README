@@ -10,7 +10,15 @@ tahoe-lafs-deps bundle into your Tahoe-LAFS source tree, you can avoid the
 download step. This is useful if you want to build Tahoe-LAFS while not
 attached to a network, a situation referred to as the "desert island build".
 
+Windows (in some circumstances) requires slightly older versions of Twisted
+and Nevow, so those versions are included here too.
+
 The tahoe-lafs-deps tarball (of which this README is a part) will unpack into a
 tahoe-deps/ directory. The Tahoe build process (i.e. 'make build' or 'python
 setup.py build_tahoe') will fetch dependent library tarballs from ./tahoe-deps/
 or ../tahoe-deps/ before it tries to download them from PyPI.
+
+You can also 'git clone https://github.com/tahoe-lafs/tahoe-deps', either
+next to or inside your tahoe-lafs tree, and the build process will find the
+deps in that directory. You may want to use --depth=1 to make it run faster:
+you do not need the full history of the tahoe-deps repository.
